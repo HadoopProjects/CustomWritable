@@ -59,4 +59,8 @@ public class CustomWritable implements WritableComparable {
 		return firstName.toString() + " " + lastName.toString();
 	}
 
+	public int hashCode() {
+		return firstName.hashCode() * 163 + lastName.hashCode();
+	}
+	
 }
